@@ -15,7 +15,9 @@
     "srtm",
     "geotiff"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "rbush": "^2.0.2"
+  },
   "devDependencies": {
     "jshint": "~2",
     "mocha": "~5",

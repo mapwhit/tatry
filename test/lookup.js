@@ -15,14 +15,51 @@ const data = [
 ];
 
 describe('lookup', function () {
-  it('find valid point', function () {
+  it('find a single point', function () {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
-    return lookup([ -106.827126, 40.483468 ]).then(result => {
+    const point = [ -106.827126, 40.483468 ];
+
+    return lookup([ point ]).then(result => {
       should.exist(result);
-      result.should.eql(2068);
+      result.should.eql([ 2068 ]);
     });
   });
+
+  it('find a multiple points', function () {
+
+    const fileBag = makeFileBag(data);
+    const { lookup } = makeLookup({ fileBag });
+
+    const pointA = [ -106.827126, 40.483468 ];
+    const pointB = [ -110, 41 ];
+    const pointC = [ -112, 39 ];
+
+    return lookup([ pointA, pointB, pointC ]).then(result => {
+      should.exist(result);
+      result.should.eql([ 2068, 2275, 1906 ]);
+    });
+  });
+
+  it('find a multiple points - some invalid', function () {
+
+    const fileBag = makeFileBag(data);
+    const { lookup } = makeLookup({ fileBag });
+
+    const pointA = [ -106.827126, 40.483468 ];
+    const pointB = [ -110, 44 ]; // invalid point - outside range
+    const pointC = [ -112, 39 ];
+
+    return lookup([ pointA, pointB, pointC ]).then(result => {
+      should.exist(result);
+      result.should.eql([
+        2068,
+        -32768, // invalid elevation
+        1906
+      ]);
+    });
+  });
+
 });

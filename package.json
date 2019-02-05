@@ -16,6 +16,8 @@
     "geotiff"
   ],
   "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "geotiff": "^1.0.0-beta.6",
     "rbush": "^2.0.2"
   },
   "devDependencies": {

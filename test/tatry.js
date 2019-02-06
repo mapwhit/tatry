@@ -14,9 +14,9 @@ describe('tatry', function () {
       .expect('Content-Type', /json/)
       .expect(200)
       .then(response => response.body.should.have.property('results', [
-        { latitude: 40.483468, longitude: -106.827126, elevation: 2068 },
-        { latitude: 40.5, longitude: -106.1, elevation: 3045 },
-        { latitude: 40.8, longitude: -106.9, elevation: 2512 }
+        { latitude: 40.483468, longitude: -106.827126, elevation: 2082.5 },
+        { latitude: 40.5, longitude: -106.1, elevation: 3065 },
+        { latitude: 40.8, longitude: -106.9, elevation: 2474 }
       ]));
   });
 
@@ -32,9 +32,9 @@ describe('tatry', function () {
       .expect('Content-Type', /json/)
       .expect(200)
       .then(response => response.body.should.have.property('results', [
-        { latitude: 40.483468, longitude: -106.827126, elevation: 2068 },
-        { latitude: 40.5, longitude: -106.1, elevation: 3045 },
-        { latitude: 40.8, longitude: -106.9, elevation: 2512 }
+        { latitude: 40.483468, longitude: -106.827126, elevation: 2082.5 },
+        { latitude: 40.5, longitude: -106.1, elevation: 3065 },
+        { latitude: 40.8, longitude: -106.9, elevation: 2474 }
       ]));
   });
 

@@ -36,7 +36,7 @@ describe('lookup', function () {
 
     return lookup([ point ]).then(result => {
       should.exist(result);
-      result.should.eql([ 2068 ]);
+      result.should.eql([ 2082.5 ]);
     });
   });
 
@@ -51,7 +51,7 @@ describe('lookup', function () {
 
     return lookup([ pointA, pointB, pointC ]).then(result => {
       should.exist(result);
-      result.should.eql([ 2068, 3045, 2512 ]);
+      result.should.eql([ 2082.5, 3065, 2474 ]);
     });
   });
 
@@ -67,9 +67,9 @@ describe('lookup', function () {
     return lookup([ pointA, pointB, pointC ]).then(result => {
       should.exist(result);
       result.should.eql([
-        2068,
+        2082.5,
         -32768, // invalid elevation
-        2512
+        2474
       ]);
     });
   });

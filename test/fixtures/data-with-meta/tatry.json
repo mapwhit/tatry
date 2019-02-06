@@ -4,7 +4,7 @@
     "maxX": -106.00208331733002,
     "minY": 41.60833317076,
     "maxY": 42.00833317012,
-    "file": "/var/lib/tatry/small/srmt-250m_13_0.tif",
+    "file": "/var/lib/tatry/srmt-250m_13_0.tif",
     "meta": {
       "width": 480,
       "height": 192,
@@ -23,7 +23,7 @@
     "maxX": -106.00208331733002,
     "minY": 40.408333172679995,
     "maxY": 40.808333172039994,
-    "file": "/var/lib/tatry/small/srmt-250m_13_3.tif",
+    "file": "/var/lib/tatry/srmt-250m_13_3.tif",
     "meta": {
       "width": 480,
       "height": 192,
@@ -42,7 +42,7 @@
     "maxX": -106.00208331733002,
     "minY": 40.00833317332,
     "maxY": 40.408333172679995,
-    "file": "/var/lib/tatry/small/srmt-250m_13_4.tif",
+    "file": "/var/lib/tatry/srmt-250m_13_4.tif",
     "meta": {
       "width": 480,
       "height": 192,
@@ -61,7 +61,7 @@
     "maxX": -111.00208330933002,
     "minY": 37.2083331778,
     "maxY": 37.60833317716,
-    "file": "/var/lib/tatry/small/srmt-250m_8_11.tif",
+    "file": "/var/lib/tatry/srmt-250m_8_11.tif",
     "meta": {
       "width": 480,
       "height": 192,
@@ -80,7 +80,7 @@
     "maxX": -110.00208331093002,
     "minY": 38.00833317652,
     "maxY": 38.408333175879996,
-    "file": "/var/lib/tatry/small/srmt-250m_9_9.tif",
+    "file": "/var/lib/tatry/srmt-250m_9_9.tif",
     "meta": {
       "width": 480,
       "height": 192,

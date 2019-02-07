@@ -14,7 +14,8 @@ app.set('query parser', 'simple');
 
 app.use(timings);
 
-const { v1 } = require('./lib/tatry')(TATRY_DATA_PATH);
+const { v2, v1 } = require('./lib/tatry')(TATRY_DATA_PATH);
+app.use('/api/v2', v2);
 app.use('/api/v1', v1);
 
 module.exports = app;

@@ -1,4 +1,11 @@
 
+0.2.2 / 2019-02-07
+==================
+
+ * fix typo in docs
+ * skip elevation in response if we don't have it (v2 only)
+ * never use `INVALID_ELEVATION` for interpolation
+
 0.2.1 / 2019-02-07
 ==================
 

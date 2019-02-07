@@ -1,4 +1,10 @@
 
+0.2.1 / 2019-02-07
+==================
+
+ * use geotiff with ESM
+ * use internal version of readRasters
+
 0.2.0 / 2019-02-07
 ==================
 

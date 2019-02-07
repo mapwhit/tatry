@@ -30,14 +30,14 @@ The following environment variables can be specified:
 
 ### V2
 
-#### GET `/v2/api/lookup?lls=lon_1,lat_1|lon_2,lat_2`
+#### GET `/api/v2/lookup?lls=lon_1,lat_1|lon_2,lat_2`
 
 Looks up elevation for one or more points. Each point is specified as `longitude,latitude` pair (think `x,y`).
 Points are separated with `|`.
 
 Example:
 
-    /v2/api/lookup?lls=-160,30|100,-45
+    /api/v2/lookup?lls=-160,30|100,-45
 
 Result is return as JSON and contains a single `results` property which is an array of `{ ll, elevation }` tuples.
 
@@ -56,7 +56,7 @@ Result is return as JSON and contains a single `results` property which is an ar
 }
 ```
 
-#### POST `/v2/api/lookup`
+#### POST `/api/v2/lookup`
 
 Looks up elevation for one or more points. Parameters are sent in JSON body. `lls` parameter contains an array
 of `longitude,latitude` pairs.

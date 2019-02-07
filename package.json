@@ -22,7 +22,8 @@
     "express": "~4",
     "find": "~0",
     "geotiff": "^1.0.0-beta.6",
-    "rbush": "^2.0.2"
+    "rbush": "^2.0.2",
+    "server-timings": "^2.0.1"
   },
   "devDependencies": {
     "jshint": "~2",

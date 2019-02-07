@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 require('dotenv').config({ path: '/etc/default/tatry' });
 
 const express = require('express');

@@ -30,7 +30,7 @@
     "should": "~13",
     "supertest": "^3.4.2"
   },
-  "bin": "./index.js",
+  "bin": "./server.js",
   "scripts": {
     "test": "make check"
   },

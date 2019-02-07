@@ -99,8 +99,7 @@ describe('tatry', function () {
         .expect(200)
         .then(response => response.body.should.eql({
           results: [{
-            ll: [ 10, 10 ],
-            elevation: -32768
+            ll: [ 10, 10 ]
           }]
         }));
     });

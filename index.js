@@ -7,8 +7,11 @@ const TATRY_DATA_PATH = process.env.TATRY_DATA_PATH || '/var/lib/tatry';
 
 const app = express();
 
-const { v1 } = require('./lib/tatry')(TATRY_DATA_PATH);
+app.enable('trust proxy');
+app.disable('x-powered-by');
+app.set('query parser', 'simple');
 
+const { v1 } = require('./lib/tatry')(TATRY_DATA_PATH);
 app.use('/api/v1', v1);
 
 module.exports = app;

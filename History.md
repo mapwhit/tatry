@@ -1,4 +1,9 @@
 
+0.3.0 / 2019-02-10
+==================
+
+ * stop using geotiff module - use lame-tiff parser insted
+
 0.2.3 / 2019-02-09
 ==================
 

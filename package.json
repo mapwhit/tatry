@@ -20,7 +20,6 @@
     "dotenv": "^6.2.0",
     "express": "~4",
     "find": "~0",
-    "geotiff": "pirxpilot/geotiff.js#esm",
     "rbush": "^2.0.2",
     "server-timings": "^2.0.1"
   },

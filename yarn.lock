@@ -318,6 +318,18 @@ find@~0:
   dependencies:
     traverse-chain "~0.1.0"
 
+flatbush@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/flatbush/-/flatbush-3.1.1.tgz#41871ee75e197b9b620b2692c3db150b2e23839a"
+  integrity sha512-gmNpTLhNH+3UHVirxNbyGxxfey7G2jvgqJTm70t6hlCGrtk3TQHLPjMSYzCpZLkUAx8EXXxpIfqhQFkQJ5wo5g==
+  dependencies:
+    flatqueue "^1.1.0"
+
+flatqueue@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/flatqueue/-/flatqueue-1.1.0.tgz#bc03140d40940c4cb799d18d45eaced176c3ef2d"
+  integrity sha512-N95K6UfbI1wg6iOg3ItYrL3d3kNN6Fe0+dsp6sbTBg9/3dqR5KiTaMdfxG2dz2ITKAWCSYCvjf69xpA6760Zfw==
+
 form-data@^2.3.1:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.3.tgz#dcce52c05f644f298c6a7ab936bd724ceffbf3a6"
@@ -613,11 +625,6 @@ qs@^6.5.1:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
   integrity sha512-KIJqT9jQJDQx5h5uAVPimw6yVg2SekOKu959OCtktD3FjzbpvaPr8i4zzg07DOMz+igA4W/aNM7OV8H37pFYfA==
 
-quickselect@^1.0.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/quickselect/-/quickselect-1.1.1.tgz#852e412ce418f237ad5b660d70cffac647ae94c2"
-  integrity sha512-qN0Gqdw4c4KGPsBOQafj6yj/PA6c/L63f6CaZ/DCF/xF4Esu3jVmKLUDYxghFx8Kb/O7y9tI7x2RjTSXwdK1iQ==
-
 range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
@@ -632,13 +639,6 @@ raw-body@2.3.3:
     http-errors "1.6.3"
     iconv-lite "0.4.23"
     unpipe "1.0.0"
-
-rbush@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/rbush/-/rbush-2.0.2.tgz#bb6005c2731b7ba1d5a9a035772927d16a614605"
-  integrity sha512-XBOuALcTm+O/H8G90b6pzu6nX6v2zCKiFG4BJho8a+bY6AER6t8uQUZdi5bomQc0AprCWhEGa7ncAbbRap0bRA==
-  dependencies:
-    quickselect "^1.0.1"
 
 readable-stream@1.1:
   version "1.1.13"

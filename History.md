@@ -1,4 +1,13 @@
 
+0.3.1 / 2019-02-11
+==================
+
+ * fix readRaster for some edge cases
+ * fix lookups for points on the edge
+ * simplify lame-tiff readRaster with async/await
+ * select best resolution data
+ * filter out files that tatry cannot use
+
 0.3.0 / 2019-02-10
 ==================
 

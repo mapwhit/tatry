@@ -16,6 +16,7 @@
     "geotiff"
   ],
   "dependencies": {
+    "bytes": "^3.1.0",
     "debug": "~4",
     "dotenv": "^6.2.0",
     "express": "~4",

@@ -20,8 +20,8 @@
     "dotenv": "^6.2.0",
     "express": "~4",
     "find": "~0",
+    "flatbush": "^3.1.1",
     "lru-cache": "^5.1.1",
-    "rbush": "^2.0.2",
     "server-timings": "^2.0.1"
   },
   "devDependencies": {

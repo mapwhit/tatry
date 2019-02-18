@@ -1,4 +1,12 @@
 
+1.0.0 / 2019-02-18
+==================
+
+ * update documentation
+ * make body limit configurable with `TATRY_BODY_LIMIT`
+ * add cache-control header to API responses
+ * deduplicate dependencies
+
 0.3.3 / 2019-02-17
 ==================
 

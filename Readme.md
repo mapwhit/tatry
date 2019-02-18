@@ -5,7 +5,7 @@
 
 # tatry
 
-Elevation API server.
+Fast and simple Elevation API server.
 
 ## Install
 
@@ -14,7 +14,21 @@ $ npm --global install tatry
 ```
 
 `tatry` requires dataset to work. Please refer to [open-elevation] project on how to download and prepare the dataset.
+`tatry` only works with regular TIFF files, uncompressed with elevation data kept as Int32 pixels.
 
+You can use `gdal_translate` to convert your data.
+
+```sh
+# to decompress TIFF
+gdal_translate -co "COMPRESS=none" in.tif out.tif
+
+# to convert data to Int16 per pixel
+gdal_translate -ot Int16 -strict in.tif out.tif
+```
+
+You may need to [split large][split-tiles] (>4GB) files into smaller parts since `tatry` does not support BigTIFF file format.
+
+Data does not have to cover contiguous area. Where `tatry` finds a point that is represented by multimple tiles it will attempt to use the highest resolution data. Results are automatically interpolated using [bilinear interpolation].
 
 ## Configuration
 
@@ -23,6 +37,8 @@ The following environment variables can be specified:
 - `TATRY_PORT` - port on which server listens - defaults to 3080
 - `TATRY_DATA_PATH` - location of `.tif` files - defaults to `/var/lib/tatry`
 - `TATRY_WORKERS` - number of workers threads - defaults to 2
+- `TATRY_CACHE_SIZE` - size of the .tif tile cache, the bigger it is the more .tif info will be kept in memory - defaults to 100mb
+- `TATRY_BODY_LIMIT` - maximum size of JSON body parsed - default to 250kb
 
 `tatry` will initialize its environment from `/etc/default/tatry` file
 
@@ -83,6 +99,9 @@ Big thank you to [João Ricardo Lourenço](https://github.com/Jorl17) A.K.A @Jor
 ## License
 
 MIT © [Damian Krzeminski](https://pirxpilot.me)
+
+[split-tiles]: https://github.com/mapbox/gdal-polygonize-test/blob/master/split.sh
+[bilinear interpolation]: https://en.wikipedia.org/wiki/Bilinear_interpolation
 
 [open-elevation]: https://github.com/Jorl17/open-elevation
 [open-elevation-api]: https://github.com/Jorl17/open-elevation/blob/master/docs/api.md

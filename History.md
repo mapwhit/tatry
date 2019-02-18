@@ -1,4 +1,10 @@
 
+0.3.3 / 2019-02-17
+==================
+
+ * allow '100mb' and similar as `TATRY_CACHE_SIZE`
+ * replace rbush with flatbush
+
 0.3.2 / 2019-02-17
 ==================
 

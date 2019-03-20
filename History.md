@@ -1,4 +1,10 @@
 
+1.0.1 / 2019-03-20
+==================
+
+ * re-implement ETag
+ * replace express with connect and router
+
 1.0.0 / 2019-02-18
 ==================
 

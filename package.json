@@ -34,7 +34,7 @@
     "jshint": "~2",
     "mocha": "~5",
     "should": "~13",
-    "supertest": "^3.4.2"
+    "supertest": "~4"
   },
   "bin": "./server.js",
   "scripts": {

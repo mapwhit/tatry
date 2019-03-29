@@ -16,9 +16,9 @@
     "geotiff"
   ],
   "dependencies": {
+    "@pirxpilot/connect": "~4",
     "body-parser": "~1",
     "bytes": "~3",
-    "connect": "~3",
     "debug": "~3 || ~4",
     "dotenv": "^6.2.0",
     "etag": "^1.8.1",

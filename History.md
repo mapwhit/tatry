@@ -1,4 +1,10 @@
 
+1.0.2 / 2019-03-29
+==================
+
+ * upgrade supertest
+ * replace connect with @pirxpilot/connect
+
 1.0.1 / 2019-03-20
 ==================
 

@@ -1,17 +1,15 @@
+const test = require('tape');
 const path = require('path');
-const should = require('should');
 
 const metas = require('../lib/metas');
 
-describe('metas', function () {
-  it('should extract metas from directory', function () {
+test('metas should extract metas from directory', async function (t) {
 
-    const dir = path.resolve(__dirname, 'fixtures', 'data');
+  const dir = path.resolve(__dirname, 'fixtures', 'data');
 
-    return metas(dir)
-      .then(data => {
-        should.exist(data);
-        data.should.have.length(2);
-      });
-  });
+  t.plan(2);
+
+  const data = await metas(dir);
+  t.ok(data);
+  t.equal(data.length, 2);
 });

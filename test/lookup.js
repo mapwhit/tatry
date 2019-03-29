@@ -1,4 +1,4 @@
-const should = require('should');
+const test = require('tape');
 const path = require('path');
 
 const makeFileBag = require('../lib/file-bag');
@@ -33,21 +33,20 @@ const data = [
   }
 ];
 
-describe('lookup', function () {
-  it('find a single point', function () {
+test('lookup', function (t) {
+  t.test('find a single point', async function (t) {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
     const point = [ -106.827126, 40.483468 ];
 
-    return lookup([ point ]).then(result => {
-      should.exist(result);
-      result.should.eql([ 2082.5 ]);
-    });
+    t.plan(1);
+    const result = await lookup([ point ]);
+    t.same(result, [ 2082.5 ]);
   });
 
-  it('find a multiple points', function () {
+  t.test('find a multiple points', async function (t) {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
@@ -56,13 +55,12 @@ describe('lookup', function () {
     const pointB = [ -106.1, 40.5 ];
     const pointC = [ -106.9, 40.8 ];
 
-    return lookup([ pointA, pointB, pointC ]).then(result => {
-      should.exist(result);
-      result.should.eql([ 2082.5, 3065, 2474 ]);
-    });
+    t.plan(1);
+    const result = await lookup([ pointA, pointB, pointC ]);
+    t.same(result, [ 2082.5, 3065, 2474 ]);
   });
 
-  it('find a multiple points - some invalid', function () {
+  t.test('find a multiple points - some invalid', async function (t) {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
@@ -71,14 +69,13 @@ describe('lookup', function () {
     const pointB = [ -110, 44 ]; // invalid point - outside range
     const pointC = [ -106.9, 40.8 ];
 
-    return lookup([ pointA, pointB, pointC ]).then(result => {
-      should.exist(result);
-      result.should.eql([
-        2082.5,
-        -32768, // invalid elevation
-        2474
-      ]);
-    });
+    t.plan(1);
+    const result = await lookup([ pointA, pointB, pointC ]);
+    t.same(result, [
+      2082.5,
+      -32768, // invalid elevation
+      2474
+    ]);
   });
 
 });

@@ -1,37 +1,35 @@
-const should = require('should');
+const test = require('tape');
 const fileBag = require('../lib/file-bag');
 
 
-describe('file bag', function () {
+test('file bag', function (t) {
 
-  it('find file for valid point', function () {
+  t.test('find file for valid point', function (t) {
 
     const data = require('./fixtures/data-with-meta/tatry.json');
     const fb = fileBag(data);
 
     const { file, meta } = fb.find([ -106.827126, 40.483468 ]);
-    should.exist(file);
-    file.should.eql('/var/lib/tatry/srmt-250m_13_3.tif');
+    t.equal(file, '/var/lib/tatry/srmt-250m_13_3.tif');
 
-    should.exist(meta);
-    meta.should.have.property('width', 480);
-    meta.should.have.property('height', 192);
-    meta.should.have.property('it').with.length(6);
+    t.equal(meta.width, 480);
+    t.equal(meta.height, 192);
+    t.equal(meta.it.length, 6);
+    t.end();
   });
 
-  it('find file with best resolution', function () {
+  t.test('find file with best resolution', function (t) {
 
     const data = require('./fixtures/data-with-meta/tatry-resolution.json');
     const fb = fileBag(data);
 
     const { file, meta } = fb.find([ -106.827126, 40.483468 ]);
-    should.exist(file);
-    file.should.eql('/var/lib/tatry/srmt-60m_13_3.tif');
+    t.equal(file, '/var/lib/tatry/srmt-60m_13_3.tif');
 
-    should.exist(meta);
-    meta.should.have.property('width', 480);
-    meta.should.have.property('height', 192);
-    meta.should.have.property('it').with.length(6);
+    t.equal(meta.width, 480);
+    t.equal(meta.height, 192);
+    t.equal(meta.it.length, 6);
+    t.end();
   });
 
 });

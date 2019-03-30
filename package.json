@@ -32,9 +32,9 @@
   },
   "devDependencies": {
     "jshint": "~2",
-    "mocha": "~5",
-    "should": "~13",
-    "supertest": "~4"
+    "supertest": "~4",
+    "tap-dot": "~2",
+    "tape": "~4"
   },
   "bin": "./server.js",
   "scripts": {

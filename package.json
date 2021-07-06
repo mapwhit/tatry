@@ -34,7 +34,7 @@
     "jshint": "~2",
     "supertest": "~4",
     "tap-dot": "~2",
-    "tape": "~4"
+    "tape": "~5"
   },
   "bin": "./server.js",
   "scripts": {

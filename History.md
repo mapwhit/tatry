@@ -1,4 +1,13 @@
 
+1.0.3 / 2021-07-06
+==================
+
+ * upgrade dotenv to ~10
+ * upgrade supertest to ~6
+ * upgrade lru-cache to ~6
+ * upgrade tape to ~5
+ * replace mocha with tape
+
 1.0.2 / 2019-03-29
 ==================
 

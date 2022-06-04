@@ -1,4 +1,12 @@
 
+1.0.4 / 2022-06-04
+==================
+
+ * upgrade lru-cache to ~7
+ * update dotenv to ~16
+ * soft dependency upgrade
+ * replace Travis CI with github actions
+
 1.0.3 / 2021-07-06
 ==================
 

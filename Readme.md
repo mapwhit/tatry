@@ -1,7 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
-[![Dev Dependency Status][deps-dev-image]][deps-dev-url]
 
 # tatry
 
@@ -106,15 +105,12 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [open-elevation]: https://github.com/Jorl17/open-elevation
 [open-elevation-api]: https://github.com/Jorl17/open-elevation/blob/master/docs/api.md
 
-[npm-image]: https://img.shields.io/npm/v/tatry.svg
+[npm-image]: https://img.shields.io/npm/v/tatry
 [npm-url]: https://npmjs.org/package/tatry
 
-[travis-url]: https://travis-ci.com/mapwhit/tatry
-[travis-image]: https://img.shields.io/travis/com/mapwhit/tatry.svg
+[build-url]: https://github.com/mapwhit/tatry/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/mapwhit/tatry/check
 
-[deps-image]: https://img.shields.io/david/mapwhit/tatry.svg
-[deps-url]: https://david-dm.org/mapwhit/tatry
-
-[deps-dev-image]: https://img.shields.io/david/dev/mapwhit/tatry.svg
-[deps-dev-url]: https://david-dm.org/mapwhit/tatry?type=dev
+[deps-image]: https://img.shields.io/librariesio/release/npm/tatry
+[deps-url]: https://libraries.io/npm/tatry
 

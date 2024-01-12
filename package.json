@@ -31,10 +31,8 @@
     "server-timings": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "~2",
-    "supertest": "~6",
-    "tap-dot": "~2",
-    "tape": "~5"
+    "@pirxpilot/jshint": "~3",
+    "supertest": "~6"
   },
   "bin": "./server.js",
   "scripts": {

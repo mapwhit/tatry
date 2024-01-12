@@ -1,4 +1,5 @@
-const test = require('tape');
+const test = require('node:test');
+const assert = require('node:assert/strict');
 const path = require('path');
 
 const makeFileBag = require('../lib/file-bag');
@@ -19,8 +20,8 @@ const data = [
       tileWidth: 480,
       tilesPerCol: 24,
       tilesPerRow: 1,
-      byteCounts: Uint32Array.from([ 7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680 ]),
-      offsets: Uint32Array.from([ 578, 8258, 15938, 23618, 31298, 38978, 46658, 54338, 62018, 69698, 77378, 85058, 92738, 100418, 108098, 115778, 123458, 131138, 138818, 146498, 154178, 161858, 169538, 177218 ]),
+      byteCounts: Uint32Array.from([7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680]),
+      offsets: Uint32Array.from([578, 8258, 15938, 23618, 31298, 38978, 46658, 54338, 62018, 69698, 77378, 85058, 92738, 100418, 108098, 115778, 123458, 131138, 138818, 146498, 154178, 161858, 169538, 177218]),
       it: [
         51361.000073728006,
         480.00000076799995,
@@ -33,45 +34,42 @@ const data = [
   }
 ];
 
-test('lookup', function (t) {
-  t.test('find a single point', async function (t) {
+test('lookup', async function (t) {
+  await t.test('find a single point', async function () {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
-    const point = [ -106.827126, 40.483468 ];
+    const point = [-106.827126, 40.483468];
 
-    t.plan(1);
-    const result = await lookup([ point ]);
-    t.same(result, [ 2082.5 ]);
+    const result = await lookup([point]);
+    assert.deepEqual(result, [2082.5]);
   });
 
-  t.test('find a multiple points', async function (t) {
+  await t.test('find a multiple points', async function () {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
-    const pointA = [ -106.827126, 40.483468 ];
-    const pointB = [ -106.1, 40.5 ];
-    const pointC = [ -106.9, 40.8 ];
+    const pointA = [-106.827126, 40.483468];
+    const pointB = [-106.1, 40.5];
+    const pointC = [-106.9, 40.8];
 
-    t.plan(1);
-    const result = await lookup([ pointA, pointB, pointC ]);
-    t.same(result, [ 2082.5, 3065, 2474 ]);
+    const result = await lookup([pointA, pointB, pointC]);
+    assert.deepEqual(result, [2082.5, 3065, 2474]);
   });
 
-  t.test('find a multiple points - some invalid', async function (t) {
+  await t.test('find a multiple points - some invalid', async function () {
 
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
-    const pointA = [ -106.827126, 40.483468 ];
-    const pointB = [ -110, 44 ]; // invalid point - outside range
-    const pointC = [ -106.9, 40.8 ];
+    const pointA = [-106.827126, 40.483468];
+    const pointB = [-110, 44]; // invalid point - outside range
+    const pointC = [-106.9, 40.8];
 
-    t.plan(1);
-    const result = await lookup([ pointA, pointB, pointC ]);
-    t.same(result, [
+    const result = await lookup([pointA, pointB, pointC]);
+    assert.deepEqual(result, [
       2082.5,
       -32768, // invalid elevation
       2474

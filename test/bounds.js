@@ -1,13 +1,13 @@
-const test = require('tape');
+const test = require('node:test');
+const assert = require('node:assert/strict');
 const path = require('path');
 
 const bounds = require('../lib/bounds');
 
-test('nounds should extract bounds for file', async function (t) {
+test('nounds should extract bounds for file', async function () {
   const file = path.resolve(__dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif');
 
-  t.plan(1);
-  t.same(await bounds(file), {
+  assert.deepEqual(await bounds(file), {
     minX: -107.00208331573002,
     maxX: -106.00208331733002,
     minY: 40.408333172679995,
@@ -21,8 +21,8 @@ test('nounds should extract bounds for file', async function (t) {
       tileWidth: 480,
       tilesPerCol: 24,
       tilesPerRow: 1,
-      byteCounts: [ 7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680,7680 ],
-      offsets:  [ 578, 8258, 15938, 23618, 31298, 38978, 46658, 54338, 62018, 69698, 77378, 85058, 92738, 100418, 108098, 115778, 123458, 131138, 138818, 146498, 154178, 161858, 169538, 177218 ],
+      byteCounts: [7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680, 7680],
+      offsets: [578, 8258, 15938, 23618, 31298, 38978, 46658, 54338, 62018, 69698, 77378, 85058, 92738, 100418, 108098, 115778, 123458, 131138, 138818, 146498, 154178, 161858, 169538, 177218],
       it: [
         51361.000073728006,
         480.00000076799995,

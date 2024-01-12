@@ -1,15 +1,14 @@
-const test = require('tape');
+const test = require('node:test');
+const assert = require('node:assert/strict');
 const path = require('path');
 
 const metas = require('../lib/metas');
 
-test('metas should extract metas from directory', async function (t) {
+test('metas should extract metas from directory', async function () {
 
   const dir = path.resolve(__dirname, 'fixtures', 'data');
 
-  t.plan(2);
-
   const data = await metas(dir);
-  t.ok(data);
-  t.equal(data.length, 2);
+  assert(data);
+  assert.equal(data.length, 2);
 });

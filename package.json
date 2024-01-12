@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "mapwhit/tatry",
+  "repository": "github:mapwhit/tatry",
   "license": "MIT",
   "keywords": [
     "tatry",
@@ -25,16 +25,14 @@
     "find": "~0",
     "flatbush": "^3.1.1",
     "fresh": "^0.5.2",
-    "lru-cache": "~7",
+    "lru-cache": "~10",
     "parseurl": "^1.3.2",
     "router": "~1",
     "server-timings": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "~2",
-    "supertest": "~6",
-    "tap-dot": "~2",
-    "tape": "~5"
+    "@pirxpilot/jshint": "~3",
+    "supertest": "~6"
   },
   "bin": "./server.js",
   "scripts": {

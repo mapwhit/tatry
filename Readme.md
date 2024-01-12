@@ -109,7 +109,7 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [npm-url]: https://npmjs.org/package/tatry
 
 [build-url]: https://github.com/mapwhit/tatry/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/mapwhit/tatry/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/mapwhit/tatry/check.yaml?branch=main
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/tatry
 [deps-url]: https://libraries.io/npm/tatry

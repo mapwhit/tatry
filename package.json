@@ -7,7 +7,10 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "github:mapwhit/tatry",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapwhit/tatry.git"
+  },
   "license": "MIT",
   "keywords": [
     "tatry",
@@ -37,7 +40,9 @@
   "resolutions": {
     "path-to-regexp": "0.1.10"
   },
-  "bin": "./server.js",
+  "bin": {
+    "tatry": "server.js"
+  },
   "scripts": {
     "test": "make check"
   },

@@ -1,4 +1,11 @@
 
+1.0.6 / 2024-09-11
+==================
+
+ * upgrade path-to-regexp to 0.1.10
+ * upgrade lru-cache to ~11
+ * upgrade supertest to ~7
+
 1.0.5 / 2024-01-12
 ==================
 

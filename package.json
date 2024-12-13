@@ -37,9 +37,6 @@
     "@pirxpilot/jshint": "~3",
     "supertest": "~7"
   },
-  "resolutions": {
-    "path-to-regexp": "0.1.10"
-  },
   "bin": {
     "tatry": "server.js"
   },

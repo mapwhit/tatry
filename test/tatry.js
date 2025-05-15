@@ -1,4 +1,4 @@
-process.env.TATRY_DATA_PATH = __dirname + '/fixtures/data';
+process.env.TATRY_DATA_PATH = `${__dirname}/fixtures/data`;
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -7,9 +7,7 @@ const request = require('supertest');
 const app = require('../');
 
 test('tatry', async function (t) {
-
   await t.test('v1', async function (t) {
-
     await t.test('responds to get', async function () {
       const response = await request(app)
         .get('/api/v1/lookup')
@@ -20,7 +18,9 @@ test('tatry', async function (t) {
         .expect('ETag', '"bb-om3Uf+cI6lz8xEaVNPn1nWf0fjw"')
         .expect('Server-Timing', /request.+lookup/i)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
       assert.deepEqual(results, [
         { latitude: 40.483468, longitude: -106.827126, elevation: 2082.5 },
         { latitude: 40.5, longitude: -106.1, elevation: 3065 },
@@ -50,7 +50,9 @@ test('tatry', async function (t) {
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
 
       assert.deepEqual(results, [
         { latitude: 40.483468, longitude: -106.827126, elevation: 2082.5 },
@@ -66,16 +68,15 @@ test('tatry', async function (t) {
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
 
-      assert.deepEqual(results, [
-        { longitude: 10, latitude: 10, elevation: -32768 }
-      ]);
+      assert.deepEqual(results, [{ longitude: 10, latitude: 10, elevation: -32768 }]);
     });
   });
 
   await t.test('v2', async function (t) {
-
     await t.test('responds to get', async function () {
       const response = await request(app)
         .get('/api/v2/lookup')
@@ -86,7 +87,9 @@ test('tatry', async function (t) {
         .expect('ETag', '"8b-7qj+jGWXNhf1LTbAVypElfOgubc"')
         .expect('Server-Timing', /request.+lookup/i)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
 
       assert.deepEqual(results, [
         { ll: [-106.827126, 40.483468], elevation: 2082.5 },
@@ -117,7 +120,9 @@ test('tatry', async function (t) {
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
 
       assert.deepEqual(results, [
         { ll: [-106.827126, 40.483468], elevation: 2082.5 },
@@ -133,11 +138,15 @@ test('tatry', async function (t) {
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200);
-      const { body: { results } } = response;
+      const {
+        body: { results }
+      } = response;
 
-      assert.deepEqual(results, [{
-        ll: [10, 10]
-      }]);
+      assert.deepEqual(results, [
+        {
+          ll: [10, 10]
+        }
+      ]);
     });
   });
 });

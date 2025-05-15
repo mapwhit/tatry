@@ -1,4 +1,13 @@
 
+1.1.0 / 2025-05-15
+==================
+
+ * upgrade `body-parser` to ~2
+ * use `@pirxpilot/router`
+ * upgrade flatbush to ~4
+ * soft dependency update
+ * use `biome` as a linter and formatter
+
 1.0.7 / 2024-12-13
 ==================
 

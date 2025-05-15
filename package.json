@@ -21,7 +21,7 @@
   "dependencies": {
     "@pirxpilot/connect": "~4",
     "@pirxpilot/router": "~1",
-    "body-parser": "~1",
+    "body-parser": "~2",
     "bytes": "~3",
     "debug": "~3 || ~4",
     "dotenv": "~16",

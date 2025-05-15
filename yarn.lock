@@ -247,17 +247,17 @@ find@~0:
   dependencies:
     traverse-chain "~0.1.0"
 
-flatbush@^3.1.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/flatbush/-/flatbush-3.3.1.tgz#2ba10dfe4069ef142b8692a0c19982cf0ebabce0"
-  integrity sha512-oKuPbtT+DS2CxH+9Vhbsq8HifmSCuOw+3Cy5zt/vCIrZl5KyengoTHDBLmtpZoBhcwa7/biNjgL1DwdLMJYm1A==
+flatbush@~4:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/flatbush/-/flatbush-4.4.0.tgz#4412745461ef83ee44ae5fda272cc3c00bb32a07"
+  integrity sha512-cf6G+sfy/+/FLH7Ls1URQ5GCRlXgwgqUZiEsMNrMZqb3Us3EkKmzUlKbnyoBy/4wI4oLJ+8cyCQoKJIVm92Fmg==
   dependencies:
-    flatqueue "^1.2.1"
+    flatqueue "^2.0.3"
 
-flatqueue@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flatqueue/-/flatqueue-1.2.1.tgz#82f501758fc5925742fbeb478637230456157ef2"
-  integrity sha512-X86TpWS1rGuY7m382HuA9vngLeDuWA9lJvhEG+GfgKMV5onSvx5a71cl7GMbXzhWtlN9dGfqOBrpfqeOtUfGYQ==
+flatqueue@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/flatqueue/-/flatqueue-2.0.3.tgz#dd23673cb478e25d5a9acb9dcbb85c89e9e8e64e"
+  integrity sha512-RZCWZNkmxzUOh8jqEcEGZCycb3B8KAfpPwg3H//cURasunYxsg1eIvE+QDSjX+ZPHTIVfINfK1aLTrVKKO0i4g==
 
 form-data@^4.0.0:
   version "4.0.2"

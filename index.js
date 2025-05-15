@@ -8,7 +8,7 @@ const TATRY_DATA_PATH = process.env.TATRY_DATA_PATH || '/var/lib/tatry';
 
 const app = connect();
 
-app.use(function(req, res, next) {
+app.use(function (_req, res, next) {
   res.locals = {};
   next();
 });
@@ -21,7 +21,7 @@ app.use('/api/v1', v1);
 module.exports = app;
 
 if (!module.parent) {
-  const { createServer } = require('http');
+  const { createServer } = require('node:http');
   createServer(app).listen(TATRY_PORT);
   console.log('Listening on port', TATRY_PORT);
 }

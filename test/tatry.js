@@ -16,7 +16,7 @@ test('tatry', async function (t) {
         .expect('Content-Type', 'application/json; charset=utf-8')
         .expect('Content-Length', '187')
         .expect('ETag', '"bb-om3Uf+cI6lz8xEaVNPn1nWf0fjw"')
-        .expect('Server-Timing', /request.+lookup/i)
+        .expect('Server-Timing', /total.+, lookup.+/)
         .expect(200);
       const {
         body: { results }
@@ -85,7 +85,7 @@ test('tatry', async function (t) {
         .expect('Content-Type', 'application/json; charset=utf-8')
         .expect('Content-Length', '139')
         .expect('ETag', '"8b-7qj+jGWXNhf1LTbAVypElfOgubc"')
-        .expect('Server-Timing', /request.+lookup/i)
+        .expect('Server-Timing', /total.+, lookup.+/)
         .expect(200);
       const {
         body: { results }

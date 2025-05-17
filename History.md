@@ -1,4 +1,13 @@
 
+1.2.0 / 2025-05-17
+==================
+
+ * use `supertest-fetch` instead of `supertest`
+ * remove support for `TATRY_BODY_LIMIT`
+ * tighten debug version range
+ * use `@pirxpilort/server-timings`
+ * use `node:fs.readdir` instead of `find` module
+
 1.1.0 / 2025-05-15
 ==================
 

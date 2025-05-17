@@ -37,7 +37,6 @@ The following environment variables can be specified:
 - `TATRY_DATA_PATH` - location of `.tif` files - defaults to `/var/lib/tatry`
 - `TATRY_WORKERS` - number of workers threads - defaults to 2
 - `TATRY_CACHE_SIZE` - size of the .tif tile cache, the bigger it is the more .tif info will be kept in memory - defaults to 100mb
-- `TATRY_BODY_LIMIT` - maximum size of JSON body parsed - default to 250kb
 
 `tatry` will initialize its environment from `/etc/default/tatry` file
 

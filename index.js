@@ -1,7 +1,7 @@
 require('dotenv').config({ path: '/etc/default/tatry' });
 
 const connect = require('@pirxpilot/connect');
-const timings = require('server-timings');
+const timings = require('@pirxpilot/server-timings');
 
 const TATRY_PORT = process.env.TATRY_PORT || 3080;
 const TATRY_DATA_PATH = process.env.TATRY_DATA_PATH || '/var/lib/tatry';

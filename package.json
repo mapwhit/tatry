@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "supertest": "~7"
+    "supertest-fetch": "^2.0.0"
   },
   "bin": {
     "tatry": "server.js"

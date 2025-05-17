@@ -26,7 +26,6 @@
     "debug": "~3 || ~4",
     "dotenv": "~16",
     "etag": "^1.8.1",
-    "find": "~0",
     "flatbush": "~4",
     "fresh": "^0.5.2",
     "lru-cache": "~11",

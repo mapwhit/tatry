@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@pirxpilot/connect':
         specifier: ~4
-        version: 4.2.0
+        version: 4.2.1
       '@pirxpilot/router':
         specifier: ~1
         version: 1.1.0
@@ -101,8 +101,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pirxpilot/connect@4.2.0':
-    resolution: {integrity: sha512-VuLSeZ4D1qbUejV0XHi7N6b09bt6FWZ2P0moAbRLkiWGUQlDgTfkAz5MbAM7HzpJYt/fVMvOI7T93J79+PeIKw==}
+  '@pirxpilot/connect@4.2.1':
+    resolution: {integrity: sha512-IK0WBFX9urDwG0Qe4Y9SQJxmtj/CdF6BOf5JGHJqiYvoDwyyqSU/evjZdqQWwR0XCQRwdvVWklzv0VUsGvb6NQ==}
 
   '@pirxpilot/router@1.1.0':
     resolution: {integrity: sha512-kcpxJkJVzeqDJr6oE3gwVC9qhIvAJfoaqK9QiE8WgT9GwlYhZ32d4xA6KltJgj9myqGO8PPvzKPet1OOeoecKA==}
@@ -199,7 +199,7 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  '@pirxpilot/connect@4.2.0':
+  '@pirxpilot/connect@4.2.1':
     dependencies:
       debug: 4.4.1
       parseurl: 1.3.3

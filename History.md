@@ -1,4 +1,11 @@
 
+1.2.2 / 2025-07-04
+==================
+
+ * upgrade `biome` to 2.0.6
+ * replace `dotenv` with `process.loadEnvFile`
+ * use `pnpm` package manager
+
 1.2.1 / 2025-05-17
 ==================
 

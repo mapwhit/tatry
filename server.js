@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-require('dotenv').config({ path: '/etc/default/tatry' });
+try {
+  process.loadEnvFile('/etc/default/tatry');
+} catch (err) {
+  console.error('Failed to load environment variables:', err.message);
+}
 
 const cluster = require('node:cluster');
 const debug = require('debug')('tatry:cluster');

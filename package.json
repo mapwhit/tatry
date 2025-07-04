@@ -24,7 +24,6 @@
     "@pirxpilot/server-timings": "~1",
     "bytes": "~3",
     "debug": "~4",
-    "dotenv": "~16",
     "etag": "^1.8.1",
     "flatbush": "~4",
     "fresh": "^0.5.2",

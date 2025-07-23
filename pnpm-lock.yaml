@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  on-headers: npm:@pirxpilot/on-headers@2.0.0
+
 importers:
 
   .:
@@ -104,6 +107,10 @@ packages:
   '@pirxpilot/connect@4.2.1':
     resolution: {integrity: sha512-IK0WBFX9urDwG0Qe4Y9SQJxmtj/CdF6BOf5JGHJqiYvoDwyyqSU/evjZdqQWwR0XCQRwdvVWklzv0VUsGvb6NQ==}
 
+  '@pirxpilot/on-headers@2.0.0':
+    resolution: {integrity: sha512-VyGrSxK5QmH60aGvk1ieb0MZEn3dFyY42lxnMkxPYzc+727FM9efg+tcIT0qblZKBfkmb8W+UKNuxoNV2jQeDQ==}
+    engines: {node: '>= 20.0.0'}
+
   '@pirxpilot/router@1.1.0':
     resolution: {integrity: sha512-kcpxJkJVzeqDJr6oE3gwVC9qhIvAJfoaqK9QiE8WgT9GwlYhZ32d4xA6KltJgj9myqGO8PPvzKPet1OOeoecKA==}
     engines: {node: '>= 0.10'}
@@ -145,10 +152,6 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-
-  on-headers@1.0.2:
-    resolution: {integrity: sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==}
-    engines: {node: '>= 0.8'}
 
   parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
@@ -206,6 +209,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@pirxpilot/on-headers@2.0.0': {}
+
   '@pirxpilot/router@1.1.0':
     dependencies:
       parseurl: 1.3.3
@@ -213,7 +218,7 @@ snapshots:
 
   '@pirxpilot/server-timings@1.0.0':
     dependencies:
-      on-headers: 1.0.2
+      on-headers: '@pirxpilot/on-headers@2.0.0'
 
   bytes@3.1.2: {}
 
@@ -234,8 +239,6 @@ snapshots:
   lru-cache@11.1.0: {}
 
   ms@2.1.3: {}
-
-  on-headers@1.0.2: {}
 
   parseurl@1.3.3: {}
 

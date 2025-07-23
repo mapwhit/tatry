@@ -34,6 +34,9 @@
     "@biomejs/biome": "2.0.6",
     "supertest-fetch": "^2.0.0"
   },
+  "resolutions": {
+    "on-headers": "npm:@pirxpilot/on-headers@2.0.0"
+  },
   "bin": {
     "tatry": "server.js"
   },

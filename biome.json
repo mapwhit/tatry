@@ -31,11 +31,9 @@
       },
       "complexity": {
         "noForEach": "off",
-        "useArrowFunction": "off",
         "useSimpleNumberKeys": "off"
       },
       "style": {
-        "noParameterAssign": "off",
         "useDefaultParameterLast": "error",
         "useSingleVarDeclarator": "error",
         "noUnusedTemplateLiteral": "error",

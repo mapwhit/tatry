@@ -3,7 +3,7 @@ import path from 'node:path';
 import test from 'node:test';
 import bounds from '../lib/bounds.js';
 
-test('nounds should extract bounds for file', async function () {
+test('nounds should extract bounds for file', async () => {
   const file = path.resolve(import.meta.dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif');
 
   assert.deepEqual(await bounds(file), {

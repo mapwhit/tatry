@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import interpolate from '../lib/interpolate.js';
 
-test('interpolate should calculate bilinear interpolation', function () {
+test('interpolate should calculate bilinear interpolation', () => {
   function approx(a, b, e, msg = `${a} should differ from ${b} by no more than ${e}`) {
     assert(Math.abs(a - b) < e, msg);
   }

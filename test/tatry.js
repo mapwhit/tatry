@@ -8,9 +8,9 @@ import app from '../index.js';
 
 const request = makeFetch(http.createServer(app));
 
-test('tatry', async function (t) {
-  await t.test('v1', async function (t) {
-    await t.test('responds to get', async function () {
+test('tatry', async t => {
+  await t.test('v1', async t => {
+    await t.test('responds to get', async () => {
       await request('/api/v1/lookup?locations=40.483468,-106.827126|40.5,-106.1|40.8,-106.9')
         .expectHeader('Content-Type', 'application/json; charset=utf-8')
         .expectHeader('Content-Length', '187')
@@ -26,7 +26,7 @@ test('tatry', async function (t) {
         });
     });
 
-    await t.test('responds with None-Modified if ETag matches', async function () {
+    await t.test('responds with None-Modified if ETag matches', async () => {
       await request('/api/v1/lookup?locations=40.483468,-106.827126|40.5,-106.1|40.8,-106.9', {
         cache: 'no-cache', // HACK: fetch sets 'Cache-Control' to 'no-cache' otherwise
         headers: {
@@ -36,7 +36,7 @@ test('tatry', async function (t) {
       }).expectStatus(304);
     });
 
-    await t.test('responds to post', async function () {
+    await t.test('responds to post', async () => {
       const locations = [
         { latitude: 40.483468, longitude: -106.827126 },
         { latitude: 40.5, longitude: -106.1 },
@@ -63,7 +63,7 @@ test('tatry', async function (t) {
         });
     });
 
-    await t.test('responds to get with invalid coordinates', async function () {
+    await t.test('responds to get with invalid coordinates', async () => {
       const response = await request('/api/v1/lookup?locations=10,10', {
         headers: {
           Accept: 'application/json'
@@ -76,8 +76,8 @@ test('tatry', async function (t) {
     });
   });
 
-  await t.test('v2', async function (t) {
-    await t.test('responds to get', async function () {
+  await t.test('v2', async t => {
+    await t.test('responds to get', async () => {
       const response = await request('/api/v2/lookup?lls=-106.827126,40.483468|-106.1,40.5|-106.9,40.8', {
         headers: {
           Accept: 'application/json'
@@ -96,7 +96,7 @@ test('tatry', async function (t) {
       ]);
     });
 
-    await t.test('responds with None-Modified if ETag matches', async function () {
+    await t.test('responds with None-Modified if ETag matches', async () => {
       await request('/api/v2/lookup?lls=-106.827126,40.483468|-106.1,40.5|-106.9,40.8', {
         cache: 'no-cache', // HACK: fetch sets 'Cache-Control' to 'no-cache' otherwise
         headers: {
@@ -106,7 +106,7 @@ test('tatry', async function (t) {
       }).expectStatus(304);
     });
 
-    await t.test('responds to post', async function () {
+    await t.test('responds to post', async () => {
       const response = await request('/api/v2/lookup', {
         method: 'POST',
         headers: {
@@ -131,7 +131,7 @@ test('tatry', async function (t) {
       ]);
     });
 
-    await t.test('responds to get with invalid coordinates', async function () {
+    await t.test('responds to get with invalid coordinates', async () => {
       const response = await request('/api/v2/lookup?lls=10,10', {
         headers: {
           Accept: 'application/json'

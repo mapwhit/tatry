@@ -11,7 +11,7 @@ const TATRY_DATA_PATH = process.env.TATRY_DATA_PATH || '/var/lib/tatry';
 const app = connect();
 export default app;
 
-app.use(function (_req, res, next) {
+app.use((_req, res, next) => {
   res.locals = {};
   next();
 });

@@ -32,8 +32,8 @@ const data = [
   }
 ];
 
-test('lookup', async function (t) {
-  await t.test('find a single point', async function () {
+test('lookup', async t => {
+  await t.test('find a single point', async () => {
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
@@ -43,7 +43,7 @@ test('lookup', async function (t) {
     assert.deepEqual(result, [2082.5]);
   });
 
-  await t.test('find a multiple points', async function () {
+  await t.test('find a multiple points', async () => {
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 
@@ -55,7 +55,7 @@ test('lookup', async function (t) {
     assert.deepEqual(result, [2082.5, 3065, 2474]);
   });
 
-  await t.test('find a multiple points - some invalid', async function () {
+  await t.test('find a multiple points - some invalid', async () => {
     const fileBag = makeFileBag(data);
     const { lookup } = makeLookup({ fileBag });
 

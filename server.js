@@ -11,10 +11,10 @@ if (cluster.isPrimary) {
   cluster.setupPrimary({
     exec: 'index.js'
   });
-  cluster.on('listening', function (worker, { address, port }) {
+  cluster.on('listening', (worker, { address, port }) => {
     debug(`worker ${worker.process.pid} is now connected to ${address}:${port}`);
   });
-  cluster.on('exit', function (worker) {
+  cluster.on('exit', worker => {
     const {
       process: { pid, exitCode }
     } = worker;

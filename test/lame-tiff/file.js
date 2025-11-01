@@ -4,11 +4,11 @@ import path from 'node:path';
 import test from 'node:test';
 import { header, ifd, parse } from '../../lib/lame-tiff/file.js';
 
-test('tiff file', async function (t) {
+test('tiff file', async t => {
   const file = path.resolve(import.meta.dirname, '..', 'fixtures', 'data', 'srmt-250m_13_3.tif');
   const fh = await open(file, constants.O_RDONLY);
 
-  await t.test('should parse header', async function () {
+  await t.test('should parse header', async () => {
     const h = await header(fh);
 
     assert.equal(h.fh, fh);
@@ -16,7 +16,7 @@ test('tiff file', async function (t) {
     assert.equal(h.ifdOffset, 8);
   });
 
-  await t.test('should parse ifd', async function () {
+  await t.test('should parse ifd', async () => {
     const data = await ifd({
       fh,
       littleEndian: true,
@@ -30,7 +30,7 @@ test('tiff file', async function (t) {
     });
   });
 
-  await t.test('should parse file directory', async function () {
+  await t.test('should parse file directory', async () => {
     const result = await parse(file);
 
     assert(result.fh);

@@ -1,16 +1,12 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const {
-  promises: { open },
-  constants: { O_RDONLY }
-} = require('node:fs');
-const path = require('node:path');
-
-const { header, ifd, parse } = require('../../lib/lame-tiff/file');
+import assert from 'node:assert/strict';
+import { constants, open } from 'node:fs/promises';
+import path from 'node:path';
+import test from 'node:test';
+import { header, ifd, parse } from '../../lib/lame-tiff/file.js';
 
 test('tiff file', async function (t) {
-  const file = path.resolve(__dirname, '..', 'fixtures', 'data', 'srmt-250m_13_3.tif');
-  const fh = await open(file, O_RDONLY);
+  const file = path.resolve(import.meta.dirname, '..', 'fixtures', 'data', 'srmt-250m_13_3.tif');
+  const fh = await open(file, constants.O_RDONLY);
 
   await t.test('should parse header', async function () {
     const h = await header(fh);
@@ -22,7 +18,7 @@ test('tiff file', async function (t) {
 
   await t.test('should parse ifd', async function () {
     const data = await ifd({
-      fh: fh,
+      fh,
       littleEndian: true,
       ifdOffset: 8
     });

@@ -1,9 +1,8 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const path = require('node:path');
-
-const makeFileBag = require('../lib/file-bag');
-const makeLookup = require('../lib/lookup');
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import test from 'node:test';
+import makeFileBag from '../lib/file-bag.js';
+import makeLookup from '../lib/lookup.js';
 
 const data = [
   {
@@ -11,7 +10,7 @@ const data = [
     maxX: -106.00208331733002,
     minY: 40.408333172679995,
     maxY: 40.808333172039994,
-    file: path.resolve(__dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif'),
+    file: path.resolve(import.meta.dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif'),
     meta: {
       littleEndian: true,
       height: 192,

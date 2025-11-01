@@ -1,11 +1,10 @@
-process.env.TATRY_DATA_PATH = `${__dirname}/fixtures/data`;
+import './fixtures/env.js';
 
-const http = require('node:http');
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const { makeFetch } = require('supertest-fetch');
-
-const app = require('../');
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import test from 'node:test';
+import { makeFetch } from 'supertest-fetch';
+import app from '../index.js';
 
 const request = makeFetch(http.createServer(app));
 

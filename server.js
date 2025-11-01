@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 
-try {
-  process.loadEnvFile('/etc/default/tatry');
-} catch (err) {
-  console.error('Failed to load environment variables:', err.message);
-}
+import './lib/env.js';
 
-const cluster = require('node:cluster');
-const debug = require('debug')('tatry:cluster');
+import cluster from 'node:cluster';
+import Debug from 'debug';
 
-if (cluster.isMaster) {
-  cluster.setupMaster({
+const debug = Debug('tatry:cluster');
+
+if (cluster.isPrimary) {
+  cluster.setupPrimary({
     exec: 'index.js'
   });
   cluster.on('listening', function (worker, { address, port }) {

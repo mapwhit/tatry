@@ -1,6 +1,6 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const interpolate = require('../lib/interpolate');
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import interpolate from '../lib/interpolate.js';
 
 test('interpolate should calculate bilinear interpolation', function () {
   function approx(a, b, e, msg = `${a} should differ from ${b} by no more than ${e}`) {

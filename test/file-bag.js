@@ -1,10 +1,10 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const fileBag = require('../lib/file-bag');
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import fileBag from '../lib/file-bag.js';
 
 test('file bag', async function (t) {
-  await t.test('find file for valid point', function () {
-    const data = require('./fixtures/data-with-meta/tatry.json');
+  await t.test('find file for valid point', async function () {
+    const { default: data } = await import('./fixtures/data-with-meta/tatry.json', { with: { type: 'json' } });
     const fb = fileBag(data);
 
     const { file, meta } = fb.find([-106.827126, 40.483468]);
@@ -15,8 +15,10 @@ test('file bag', async function (t) {
     assert.equal(meta.it.length, 6);
   });
 
-  await t.test('find file with best resolution', function () {
-    const data = require('./fixtures/data-with-meta/tatry-resolution.json');
+  await t.test('find file with best resolution', async function () {
+    const { default: data } = await import('./fixtures/data-with-meta/tatry-resolution.json', {
+      with: { type: 'json' }
+    });
     const fb = fileBag(data);
 
     const { file, meta } = fb.find([-106.827126, 40.483468]);

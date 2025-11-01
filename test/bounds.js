@@ -1,11 +1,10 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const path = require('node:path');
-
-const bounds = require('../lib/bounds');
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import test from 'node:test';
+import bounds from '../lib/bounds.js';
 
 test('nounds should extract bounds for file', async function () {
-  const file = path.resolve(__dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif');
+  const file = path.resolve(import.meta.dirname, 'fixtures', 'data', 'srmt-250m_13_3.tif');
 
   assert.deepEqual(await bounds(file), {
     minX: -107.00208331573002,

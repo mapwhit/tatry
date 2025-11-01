@@ -15,8 +15,8 @@ importers:
         specifier: ~4
         version: 4.2.1
       '@pirxpilot/router':
-        specifier: ~1
-        version: 1.1.0
+        specifier: ~2
+        version: 2.0.0
       '@pirxpilot/server-timings':
         specifier: ~1
         version: 1.0.0
@@ -111,9 +111,9 @@ packages:
     resolution: {integrity: sha512-VyGrSxK5QmH60aGvk1ieb0MZEn3dFyY42lxnMkxPYzc+727FM9efg+tcIT0qblZKBfkmb8W+UKNuxoNV2jQeDQ==}
     engines: {node: '>= 20.0.0'}
 
-  '@pirxpilot/router@1.1.0':
-    resolution: {integrity: sha512-kcpxJkJVzeqDJr6oE3gwVC9qhIvAJfoaqK9QiE8WgT9GwlYhZ32d4xA6KltJgj9myqGO8PPvzKPet1OOeoecKA==}
-    engines: {node: '>= 0.10'}
+  '@pirxpilot/router@2.0.0':
+    resolution: {integrity: sha512-1lplDim8DZXj8R4zSW+3/DQ3FDbaNTa1uejS7ZL+/VEIBlsoxtdY+qQ9ch3gory6QCmVUqncEh3rh8QV59XNgQ==}
+    engines: {node: '>= 23.8.0'}
 
   '@pirxpilot/server-timings@1.0.0':
     resolution: {integrity: sha512-kDLcGmdgA/UMdqzaaF8whDMNJsLUKE5933H1BOP9cjSUlmUYGX3dRUOs3TiLMpnAgsOSBGhh5xjhCEo1wYAlAQ==}
@@ -156,10 +156,6 @@ packages:
   parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
     engines: {node: '>= 0.8'}
-
-  path-to-regexp@8.2.0:
-    resolution: {integrity: sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==}
-    engines: {node: '>=16'}
 
   supertest-fetch@2.0.0:
     resolution: {integrity: sha512-Mx2ZszLJkrBMFt7fmyML12y+u2yHAN5FF94yOzZXHzrTtsS59fjdbqh9G4OAPDM14jnkDkcLk2AgCVGJZcVoUg==}
@@ -211,10 +207,9 @@ snapshots:
 
   '@pirxpilot/on-headers@2.0.0': {}
 
-  '@pirxpilot/router@1.1.0':
+  '@pirxpilot/router@2.0.0':
     dependencies:
       parseurl: 1.3.3
-      path-to-regexp: 8.2.0
 
   '@pirxpilot/server-timings@1.0.0':
     dependencies:
@@ -241,7 +236,5 @@ snapshots:
   ms@2.1.3: {}
 
   parseurl@1.3.3: {}
-
-  path-to-regexp@8.2.0: {}
 
   supertest-fetch@2.0.0: {}

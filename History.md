@@ -1,4 +1,12 @@
 
+2.0.0 / 2025-11-01
+==================
+
+ * transition to ESM format
+ * upgrade `@pirxpilot/router` to ~2
+ * update github actions
+ * upgrade `biome` to 2.3.2
+
 1.2.3 / 2025-07-23
 ==================
 

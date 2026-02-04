@@ -1,4 +1,11 @@
 
+2.0.1 / 2026-02-04
+==================
+
+ * upgrade `biome` to 2.3.14
+ * soft dependency update
+ * update `connect` and `server-timings`
+
 2.0.0 / 2025-11-01
 ==================
 

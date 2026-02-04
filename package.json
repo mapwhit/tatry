@@ -20,9 +20,9 @@
     "geotiff"
   ],
   "dependencies": {
-    "@pirxpilot/connect": "~4",
+    "@pirxpilot/connect": "~5",
     "@pirxpilot/router": "~2",
-    "@pirxpilot/server-timings": "~1",
+    "@pirxpilot/server-timings": "~2",
     "bytes": "~3",
     "debug": "~4",
     "etag": "^1.8.1",

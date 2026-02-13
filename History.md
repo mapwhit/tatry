@@ -1,4 +1,9 @@
 
+2.0.2 / 2026-02-12
+==================
+
+ * use nullish coalescing assignment `??=` where possible
+
 2.0.1 / 2026-02-04
 ==================
 
